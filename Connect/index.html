@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Support</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <h1 class="Title">Placement Support</h1>
+    <div class="color1"></div>
+    <div id="imageContainer" class="images"></div>
+    <div class="color1"></div>
+    <h1 id="Questions"  class="Title"></h1>
+    
+    <h3 onclick="displayimages();" style="cursor: pointer;">Top Interview Question</h3>
+    <!-- displayimages() -->
+    <table border="1">
+        <tr>
+            <th onclick="happens();" style="cursor: pointer;">Question</th>
+            <th onclick="category()" style="cursor: pointer;">Category</th>
+        </tr>
+        <tr>
+            <td id="q1"></td>
+            <td id="c1"></td>
+        </tr>
+        <tr>
+            <td id="q2"></td>
+            <td id="c2"></td>
+        </tr>
+        <tr>
+            <td id="q3"></td>
+            <td id="c3"></td>
+        </tr>
+        <tr>
+            <td id="q4"></td>
+            <td id="c4"></td>
+        </tr>
+        <tr>
+            <td id="q5"></td>
+            <td id="c5"></td>
+        </tr>
+        <tr>
+            <td id="q6"></td>
+            <td id="c6"></td>
+        </tr>
+    </table>
+    <script>
+        const info = {
+        Question :{
+            q1:"What is your biggest strength?",
+            q2:"What is your biggest weakness?",
+            q3:"Explain the concept of data normalization.",
+            q4:"What is the difference between HTML and HTML5?",
+            q5:"How do you handle conflicts in a team?",
+            q6:"Explain the time complexity of quicksort."
+            },
+        category :{
+            c1:"Interview",
+            c2:"Interview",
+            c3:"Technical",
+            c4:"Technical",
+            c5:"Behavioral",
+            c6:"Technical"
+        }
+        }
+        document.getElementById("q1").textContent = info.Question.q1;
+        document.getElementById("q2").textContent = info.Question.q2;
+        document.getElementById("q3").textContent = info.Question.q3;
+        document.getElementById("q4").textContent = info.Question.q4;
+        document.getElementById("q5").textContent = info.Question.q5;
+        document.getElementById("q6").textContent = info.Question.q6;
+
+        document.getElementById("c1").textContent = info.category.c1;
+        document.getElementById("c2").textContent = info.category.c2;
+        document.getElementById("c3").textContent = info.category.c3;
+        document.getElementById("c4").textContent = info.category.c4;
+        document.getElementById("c5").textContent = info.category.c5;
+        document.getElementById("c6").textContent = info.category.c6;
+    </script>
+</body>
+</html>
