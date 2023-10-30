@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Main Page</title>
+</head>
+<body>
+  <center>
+    <a  href="/Top_150.html"><h1>Top Interview 150</h1></a>
+  </center>
+  <center><a href="/Tips.html"><h3>Get a Tip</h3></a></center>
+  <center>
+    <h1>Personal Details</h1>
+  </center>
+  <form action="javascript:void(0);" id="personalDetailsForm">
+    First Name(s): <input type="text" id="firstName" size="50">
+    &nbsp Title: <input type="text" id="title" size="20">
+    &nbsp Surname: <input type="text" id="surname" size="50"> <br>
+    <h2>Current Employment</h2>
+    Employer : <input type="text" id="employer" size="80"><br><br>
+    &nbsp Position : <input type="text" id="position" size="80">
+    <h2>Work Address</h2>
+    Street: <input type="text" id="workStreet" size="40">
+    &nbsp Suburb/Town: <input type="text" id="workSuburb" size="20">
+    &nbsp State: <input type="text" id="workState" size="50">
+    &nbsp Pincode: <input type="number" id="workPincode" size="50"> <br><br>
+    Country : <input type="text" id="workCountry" size="80"><br><br>
+    Tel: <input type="text" id="workTel" size="40">
+    &nbsp Fax: <input type="text" id="workFax" size="20">
+    &nbsp Email: <input type="email" id="workEmail" size="50"><br>
+    <h2>Home Address</h2>
+    Street: <input type="text" id="homeStreet" size="40">
+    &nbsp Suburb/Town: <input type="text" id="homeSuburb" size="20">
+    &nbsp State: <input type="text" id="homeState" size="50">
+    &nbsp Pincode: <input type="number" id="homePincode" size="50"> <br><br>
+    Country : <input type="text" id="homeCountry" size="80"><br><br>
+    Tel: <input type="text" id="homeTel" size="40">
+    &nbsp Fax: <input type="text" id="homeFax" size="20"><br><br>
+    <h2>Preference of Mailing Address</h2>
+    Work Address : <input type="checkbox" id="workAddressCheckbox">
+    &nbsp Home Address : <input type="checkbox" id="homeAddressCheckbox">
+  </form>
+  <center>
+    <h1>Membership Profile</h1>
+  </center>
+  <form action="javascript:void(0);" id="membershipProfileForm">
+    Academic Qualifications : <input type="text" id="academicQualifications" size="80"><br><br>
+    Professional Qualifications : <input type="text" id="professionalQualifications" size="80">
+    <h2>Interests: </h2>
+    <textarea id="interests" cols="160" rows="10" placeholder="Write Your Interests"></textarea><br><br>
+    Research and Consulting Interests: <input type="text" id="researchInterests" size="70"><br><br>
+    Achievements: <input type="text" id="achievements" size="100">
+  </form>
+  <center>
+    <div>
+      <button type="button" onclick="validateForm()"> <strong>Submit</strong></button>
+    </div>
+  </center>
+
+  <script>
+    function validateForm() {
+      // Personal Details Form Validation
+      const firstName = document.getElementById("firstName").value;
+      const title = document.getElementById("title").value;
+      const surname = document.getElementById("surname").value;
+      const workAddressCheckbox = document.getElementById("workAddressCheckbox").checked;
+      const homeAddressCheckbox = document.getElementById("homeAddressCheckbox").checked;
+
+      if (firstName === "" || title === "" || surname === "" || (!workAddressCheckbox && !homeAddressCheckbox)) {
+        alert("Please fill in all required fields in the Personal Details section.");
+        return;
+      }
+
+      // Membership Profile Form Validation
+      const academicQualifications = document.getElementById("academicQualifications").value;
+      const professionalQualifications = document.getElementById("professionalQualifications").value;
+      const interests = document.getElementById("interests").value;
+      const researchInterests = document.getElementById("researchInterests").value;
+      const achievements = document.getElementById("achievements").value;
+
+      if (academicQualifications === "" || professionalQualifications === "" || interests === "") {
+        alert("Please fill in all required fields in the Membership Profile section.");
+        return;
+      }
+
+      // If both forms are valid, you can proceed with submission or further actions
+      // For this example, let's assume the forms are valid.
+      alert("Forms are valid. You can proceed with submission.");
+    }
+  </script>
+</body>
+</html>
