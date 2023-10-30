@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MySQL Data</title>
+</head>
+<body>
+  <h1>MySQL Data</h1>
+  <table>
+    <tr>
+      <th>Field1</th>
+      <th>Field2</th>
+      <th>Field3</th>
+      <th>Field4</th>
+    </tr>
+    <% data.forEach((row) => { %>
+      <tr>
+        <td><%= row.field1 %></td>
+        <td><%= row.field2 %></td>
+        <td><%= row.field3 %></td>
+        <td><%= row.field4 %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ddd;
+        }
+
+        tr:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Country</th>
+        </tr>
+        <% data.forEach((row) => { %>
+            <tr>
+              <td><%= row.field1 %></td>
+              <td><%= row.field2 %></td>
+              <td><%= row.field3 %></td>
+              <td><%= row.field4 %></td>
+            </tr>
+          <% }); %>
+    </table>
+</body>
+</html>
